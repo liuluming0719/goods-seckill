@@ -1,5 +1,6 @@
 package com.llm.goodsSecKill.common.vo;
 
+import com.llm.goodsSecKill.common.enums.ResultEnum;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -17,7 +18,7 @@ public class ResultVo implements Serializable {
     private Object data;
 
     public static ResultVo success(Object data) {
-        return success(200, "操作成功", data);
+        return success(ResultEnum.SUCCESS.getCode(), ResultEnum.SUCCESS.getMsg(), data);
     }
 
     public static ResultVo success(int code, String msg, Object data) {
@@ -29,11 +30,11 @@ public class ResultVo implements Serializable {
     }
 
     public static ResultVo error(String msg) {
-        return error(400, msg, null);
+        return error(ResultEnum.ERROR.getCode(), msg, null);
     }
 
     public static ResultVo error(String msg, Object data) {
-        return error(400, msg, data);
+        return error(ResultEnum.ERROR.getCode(), msg, data);
     }
 
     public static ResultVo error(int code, String msg, Object data) {

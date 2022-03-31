@@ -2,6 +2,8 @@ package com.llm.goodsSecKill.business.mapper;
 
 import com.llm.goodsSecKill.business.entity.SeckillOrder;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Repository;
 
 /**
  * <p>
@@ -11,6 +13,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @author LiuLuMing
  * @since 2022-03-31
  */
+@Mapper
 public interface SeckillOrderMapper extends BaseMapper<SeckillOrder> {
 
 }
