@@ -1,18 +1,16 @@
 package com.llm.goodsSecKill;
 
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @RestController
-@SpringBootApplication
-@MapperScan("com.llm.goodsSecKill")
+@SpringBootApplication(scanBasePackages = {"com.llm.goodsSecKill"})
 public class GoodsSeckillApplication {
 
     public static void main(String[] args) {

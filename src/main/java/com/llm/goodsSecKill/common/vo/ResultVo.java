@@ -17,6 +17,9 @@ public class ResultVo implements Serializable {
     private String msg;
     private Object data;
 
+    public static ResultVo success() {
+        return success(ResultEnum.SUCCESS.getCode(), ResultEnum.SUCCESS.getMsg(), null);
+    }
     public static ResultVo success(Object data) {
         return success(ResultEnum.SUCCESS.getCode(), ResultEnum.SUCCESS.getMsg(), data);
     }
@@ -35,6 +38,10 @@ public class ResultVo implements Serializable {
 
     public static ResultVo error(String msg, Object data) {
         return error(ResultEnum.ERROR.getCode(), msg, data);
+    }
+
+    public static ResultVo error(ResultEnum resultEnum) {
+        return error(resultEnum.getCode(), resultEnum.getMsg(), null);
     }
 
     public static ResultVo error(int code, String msg, Object data) {

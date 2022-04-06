@@ -3,7 +3,6 @@ package com.llm.goodsSecKill.business.mapper;
 import com.llm.goodsSecKill.business.entity.Order;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
-import org.springframework.stereotype.Repository;
 
 /**
  * <p>
