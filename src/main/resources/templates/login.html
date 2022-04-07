@@ -90,8 +90,8 @@
                 if (data.code == 200) {
                     layer.msg("登录成功");
                     console.log(data);
-                    // document.cookie = "userTicket=" + data.data;
-                    // window.location.href = "/goods/toList";
+                     document.cookie = "userTicket=" + data.data;
+                     window.location.href = "/goods/toGoodsList";
                 } else {
                     layer.msg(data.msg);
                 }
